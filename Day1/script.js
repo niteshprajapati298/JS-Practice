@@ -1,37 +1,39 @@
-//how you build logic
-/*addition - 1+2;
 
+// Array of mixed elements
+var a = [1, 2, "3", 4];
 
-*/
+// Function to append "Hello" to each array element
+function appendHelloToEachElement(array) {
+    array.forEach(val => console.log(`${val} Hello`));
+}
 
-// array - foreach map filter
-var a = [1,2,"3",4];
-// a.forEach((val)=>{console.log(val+2);})//hight order functions 
+// Function to print elements less than 2
+function printElementsLessThanTwo(array) {
+    array.forEach(val => {
+        if (val < 2) console.log(val);
+    });
+}
 
+// Function to sum only numeric elements, skipping strings
+function sumNumericElements(array) {
+    var sum = 0;
+    array.forEach(element => {
+        if (typeof element === "number") {
+            sum += element;
+        }
+    });
+    console.log("Sum of numeric elements:", sum);
+}
 
-//for each ka use karke ek array ke saare members ke aage hello print karao
+// Executing the functions
+console.log("Appended 'Hello' to each element:");
+appendHelloToEachElement(a);
 
+console.log("\nElements less than 2:");
+printElementsLessThanTwo(a);
 
-// a.forEach((val)=>console.log(`${val} Hello`))
+console.log("\nSumming numeric elements:");
+sumNumericElements(a);
 
-// ki array saare members print karo aur unhe chodh do jo ki 2 se bade ho 
-
-// a.forEach((val)=>{
-//  if(val<2) console.log(val);
-// })
-//sare elements jo ki array mai hai unka sum kro
-var sum = 0;
-
-// a.forEach((val)=>{
-//     sum = sum+val;
-// })
-// console.log(sum);
-// saare bande add karo aur agar unme se koi bhi string nikal jaye to fir use skipkaro
-a.forEach(element => {
-    if(typeof element==="number"){
-     sum+=element
-    }
-});
-console.log(sum);
-//objects - access loop
-// freeze, this call apply bind
+console.log("\nDemonstrating call, apply, bind:");
+demonstrateCallApplyBind();
